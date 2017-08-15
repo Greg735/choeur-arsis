@@ -6404,10 +6404,10 @@ a.navbar-brand {
 .navbar {
   position: relative;
   min-height: 50px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   border: 0;
   border-top: 1px solid transparent;
-  border-bottom: 1px solid transparent; }
+  border-bottom: 0; }
 
 .navbar-default {
   background-color: transparent;
@@ -6419,6 +6419,24 @@ a.navbar-brand {
 .navbar-default .navbar-nav > .active > a:focus {
   color: #fff;
   background-color: #008EC0; }
+
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    padding-top: 12px;
+    padding-bottom: 12px; } }
+.navbar.container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0; }
+  .navbar.container:after {
+    background: url(../images/header_bg.jpg);
+    border-bottom: 10px solid #008FBB;
+    height: 30px;
+    display: block;
+    margin: 30px 0; }
+  .navbar.container .navbar-header {
+    margin-right: 0;
+    margin-left: 0; }
 
 /********************************************************/
 /*********************** Page basic *********************/
@@ -6467,13 +6485,41 @@ a.navbar-brand {
 /********************************************************/
 /*********************** Page home *********************/
 /********************************************************/
+body.path-frontpage .navbar.container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0; }
+  body.path-frontpage .navbar.container:after {
+    display: none; }
+body.path-frontpage .main-container {
+  width: 100%; }
+  body.path-frontpage .main-container section.col-sm-12 {
+    padding: 0; }
+
 #block-views-block-home-slideshow-block-1 {
   background: url(../images/header_bg.jpg);
   border-bottom: 10px solid #008FBB;
   position: relative;
-  padding-top: 13px;
+  padding-top: 40px;
   margin-bottom: 90px;
-  height: 300px; }
+  height: 310px; }
+  @media screen and (max-width: 992px) {
+    #block-views-block-home-slideshow-block-1 {
+      padding-top: 0;
+      height: auto; } }
+  #block-views-block-home-slideshow-block-1 #views_slideshow_cycle_teaser_section_home_slideshow-block_1 {
+    width: 100% !important; }
+  #block-views-block-home-slideshow-block-1 .views_slideshow_cycle_slide {
+    width: 100% !important; }
+    #block-views-block-home-slideshow-block-1 .views_slideshow_cycle_slide .views-row .views-field-field-sliders img {
+      width: 100% !important;
+      border: 10px solid white;
+      max-width: 960px;
+      margin: 0 auto;
+      display: block;
+      -webkit-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.45);
+      -moz-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.45);
+      box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.45); }
 
 .views-element-container .view-concerts .views-field-field-image-concert {
   padding-bottom: 20px; }
@@ -6540,5 +6586,3 @@ a.navbar-brand {
     margin: 10px 0; }
   #block-views-block-concerts-block-2 .views-row .views-field-view-node {
     margin: 10px 0; }
-
-/*# sourceMappingURL=style.css.map */

@@ -20,6 +20,7 @@ core/phpunit.xml
 node_modules
 choeur.sublime-project
 choeur.sublime-workspace
+sftp-config.json
 
 ## build folder
 
