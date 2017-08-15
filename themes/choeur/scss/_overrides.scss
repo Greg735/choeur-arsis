@@ -1,0 +1,294 @@
+// @todo these should be their own CSS files and only included when
+// specific Drupal libraries are used.
+@import "component/alert";
+@import "component/ajax";
+@import "component/field";
+@import "component/file";
+@import "component/filter";
+@import "component/form";
+@import "component/icon";
+@import "component/navbar";
+@import "component/node";
+@import "component/panel";
+@import "component/progress-bar";
+@import "component/table-drag";
+@import "component/tabs";
+@import "component/toolbar";
+
+// jQuery UI style overrides.
+@import "jquery-ui/autocomplete";
+
+ol, ul {
+  padding-left: 1.5em;
+  .popover &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Page header.
+.page-header {
+  margin-top: 0;
+}
+
+// Footer.
+.footer {
+  margin-top: 45px;
+  padding-top: 35px;
+  padding-bottom: 36px;
+  border-top: 1px solid #E5E5E5;
+}
+
+// Paragraphs.
+p:last-child,
+.form-group:last-child,
+.panel:last-child {
+  margin-bottom: 0;
+}
+
+// Help region.
+.region-help {
+  > .glyphicon {
+    font-size: $font-size-large;
+    float: left;
+    margin: -0.05em 0.5em 0 0;
+  }
+  .block {
+    overflow: hidden;
+  }
+}
+
+ 
+.help-block, .control-group .help-inline {
+  color: $gray-light;
+  font-size: 12px;
+  margin: 5px 0 10px;
+  padding: 0;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+/** DIVERS **/
+a,a:hover{
+  color: #008fbb;
+  text-decoration: none;
+}
+h1, h2, h3{
+  color: #008fbb;
+}
+aside h2{
+  font-size: 23px;
+}
+/********************************************************/
+/************************** HEADER **********************/
+/********************************************************/
+a.navbar-brand{
+  display: none;
+}
+.region-header{
+  text-align: center;
+  img{
+    margin: 20px auto;
+    margin-bottom: 40px;
+  }
+}
+// navbar center
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 40px;
+    border: 0;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+
+.navbar-default {
+    background-color: transparent;
+    border-color: #e7e7e7;
+    border-radius: 0;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: #008EC0;
+}
+
+/********************************************************/
+/*********************** Page basic *********************/
+/********************************************************/
+
+//liens aside
+.nav > li > a:hover, 
+.nav > li > a:focus {
+    color: #fff;
+    background-color: #008EC0;
+}
+
+.page-node-type-page, .page-node-type-homepage{
+  h1{
+    display: none;
+  }
+}
+.page-header{
+  border-bottom: none;
+}
+
+/**** PAGE CONCERT ****/
+.page-node-type-concert{
+  h1.page-header{
+    display: none;
+    margin-bottom: 0;
+  }
+  .field--name-body{
+    margin-top: 20px;
+  }
+  .field--name-field-composer{
+   color: #008fbb;   
+  }
+  .group-left{
+    width: 45%;
+    margin-right: 5%;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+  .group-right{
+    width: 45%;
+    margin-left: 5%;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      margin-left: 0;
+    }
+    h3{
+      margin-top: 0;
+    }
+    img{
+      max-width: 100%;
+      height:auto;
+    }
+    .field--name-field-informations{
+      margin-top: 20px;
+    }
+  }
+}
+
+/********************************************************/
+/*********************** Page home *********************/
+/********************************************************/
+#block-views-block-home-slideshow-block-1 {
+  background: url(../images/header_bg.jpg);
+  border-bottom: 10px solid #008FBB;
+  position: relative;
+  padding-top: 13px;
+  margin-bottom: 90px;
+  height: 300px;
+}
+
+.views-element-container .view-concerts {
+  .views-field-field-image-concert {
+    padding-bottom: 20px;
+  }
+  .views-field-title {
+    padding-bottom: 10px;
+  }
+  .views-field-field-lieu-x-et-date-s- {
+    padding-bottom: 20px;
+  }
+  .views-field-view-node a {
+    font-size: 12px;
+  }
+}
+
+/********************************************************/
+/*********************** Page News *********************/
+/********************************************************/
+#block-views-block-news-block-1,
+#block-views-block-news-block-2 {
+  .views-row {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(231, 231, 231);
+    .views-field-title {
+      //text-transform: uppercase;
+      font-size: 18px;
+    }
+    .views-field-created {
+      font-size: 12px;
+    }
+  }
+}
+//bloc content uniquement
+#block-views-block-news-block-1 {
+  .views-field-title {
+    margin-bottom: 10px;
+  }
+  .views-field-field-image {
+    margin-bottom: 15px;
+  }
+  .views-field-body {
+    margin-bottom: 15px;
+    p {
+      margin-bottom: 5px;
+    }
+  }
+  .views-field-view-node a {
+    font-size: 12px;
+  }
+}
+
+
+
+
+/** SPONSORS in footer **/
+#block-views-block-sponsors-block-1{
+  .jcarousel-wrapper{
+    height: 150px;
+    border: 0;
+    box-shadow: none;
+    border-radius: 0;
+    .jcarousel-container-horizontal li{
+      width: 200px;
+      height: 120px;
+    }
+  }
+}
+
+/** CONCERTS ARCHIVES **/
+#block-views-block-concerts-block-2{
+  .views-row{
+    clear:both;
+    margin-bottom: 50px;
+    @include clearfix;
+
+    .pull-left{
+      margin-right: 50px;
+
+      @media screen and (max-width: 768px) {
+        margin-right: 0;
+        float: none !important;
+      }
+
+
+    }
+    .views-field-title{
+      font-size: 18px;
+      margin: 10px 0;
+    }
+    .views-field-view-node{
+      margin:10px 0;
+    }
+  }
+}
