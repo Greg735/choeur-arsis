@@ -17,7 +17,7 @@ Read the @link subtheme Sub-theming @endlink parent topic.
 
 ## Override Styles {#styles}
 Open `./THEMENAME/css/style.css` and modify the file to your liking.
-
+ 
 ## Override Settings {#settings}
 Please refer to the @link theme_settings Sub-theme Settings @endlink topic.
 
